@@ -5,6 +5,7 @@ Recipe schemas for request and response models (pydantic).
 from typing import Optional
 
 from pydantic import BaseModel
+from pydantic import ConfigDict
 
 from models.recipe_model import ExperienceLevel
 
@@ -37,5 +38,4 @@ class Recipe(RecipeBase):
     id: int
     owner_id: int
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
