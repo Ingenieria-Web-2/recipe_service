@@ -1,20 +1,7 @@
-import os
-import sys
-from pathlib import Path
-
 import pytest
 from fastapi.testclient import TestClient
 
 from main import app
-
-THIS_DIR = Path(__file__).resolve().parent
-APP_DIR = str(THIS_DIR.parent)
-sys.path.insert(0, APP_DIR)
-
-
-# Use in-memory sqlite for tests
-os.environ.setdefault("DATABASE_URL", "sqlite:///:memory:")
-
 
 client = TestClient(app)
 
