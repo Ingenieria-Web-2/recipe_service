@@ -1,3 +1,7 @@
+"""
+Dependency to extract user ID from request headers.
+"""
+
 from fastapi import Header, HTTPException, status
 
 

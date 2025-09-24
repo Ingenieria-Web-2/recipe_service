@@ -1,3 +1,7 @@
+"""
+Database session management.
+"""
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
@@ -9,6 +13,9 @@ Base = declarative_base()
 
 
 def get_db():
+    """
+    Dependency to get a database session.
+    """
     db = SessionLocal()
     try:
         yield db
