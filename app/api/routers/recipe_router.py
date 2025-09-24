@@ -1,3 +1,7 @@
+"""
+Recipe API router.
+"""
+
 from fastapi import APIRouter, Depends
 
 from api import dependencies
@@ -9,6 +13,9 @@ router = APIRouter()
 
 @router.get("/")
 def read_root():
+    """
+    Root endpoint to verify the service is running.
+    """
     return {"message": "Recipe API is up and running!"}
 
 
