@@ -11,14 +11,6 @@ from services.recipe_service import RecipeService
 router = APIRouter()
 
 
-@router.get("/")
-def read_root():
-    """
-    Root endpoint to verify the service is running.
-    """
-    return {"message": "Recipe API is up and running!"}
-
-
 @router.post("/create", response_model=recipe_schema.Recipe)
 def create_recipe(
     recipe_in: recipe_schema.RecipeCreate,
