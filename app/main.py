@@ -10,9 +10,6 @@ from db.session import Base, engine
 # Create all database tables
 Base.metadata.create_all(bind=engine)
 
-# Configure documentation URLs to live under the router prefix so
-# requests like /api/recipe/docs and /api/recipe/openapi.json work
-# when the gateway forwards requests without rewriting the path.
 app = FastAPI(title="Recipe Microservice")
 
 app.include_router(recipe_router.router, prefix="/api/recipe", tags=["recipe"])
