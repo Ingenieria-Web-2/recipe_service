@@ -7,7 +7,7 @@ client = TestClient(app)
 
 def test_recipe_requires_user_header():
     # No X-User-ID header -> dependency should raise 401
-    r = client.post("/api/recipe/create", json={
+    r = client.post("/create", json={
         "name": "Test Recipe",
         "description": "Tasty",
         "difficulty": "beginner",
@@ -19,7 +19,7 @@ def test_recipe_requires_user_header():
 def test_recipe_with_user_header():
     # Simulate gateway by adding X-User-ID
     headers = {"X-User-ID": "1"}
-    r = client.post("/api/recipe/create", json={
+    r = client.post("/create", json={
         "name": "Test Recipe",
         "description": "Tasty",
         "difficulty": "beginner",
