@@ -10,9 +10,9 @@ from db.session import Base, engine
 # Create all database tables
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="Recipe Microservice")
+app = FastAPI(title="Recipe Microservice", root_path="/api/recipe")
 
-app.include_router(recipe_router.router, prefix="/api/recipe", tags=["recipe"])
+app.include_router(recipe_router.router, tags=["recipe"])
 
 
 @app.get("/")
