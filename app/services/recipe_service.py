@@ -5,10 +5,10 @@ Recipe service for business logic related to recipes.
 from fastapi import Depends
 from sqlalchemy.orm import Session
 
-from db.session import get_db
-from models.recipe_model import Recipe
-from repositories.recipe_repository import RecipeRepository
-from schemas.recipe_schema import RecipeCreate
+from app.db.session import get_db
+from app.models.recipe_model import Recipe
+from app.repositories.recipe_repository import RecipeRepository
+from app.schemas.recipe_schema import RecipeCreate
 
 
 class RecipeService:

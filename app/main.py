@@ -4,8 +4,8 @@ Entry point for the Recipe microservice.
 
 from fastapi import FastAPI
 
-from api.routers import recipe_router
-from db.session import Base, engine
+from app.api.routers import recipe_router
+from app.db.session import Base, engine
 
 # Create all database tables
 Base.metadata.create_all(bind=engine)

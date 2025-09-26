@@ -7,7 +7,7 @@ from typing import Optional
 from pydantic import BaseModel
 from pydantic import ConfigDict
 
-from models.recipe_model import ExperienceLevel
+from app.models.recipe_model import ExperienceLevel
 
 
 # Shared properties

@@ -4,9 +4,9 @@ Recipe API router.
 
 from fastapi import APIRouter, Depends
 
-from api import dependencies
-from schemas import recipe_schema
-from services.recipe_service import RecipeService
+from app.api import dependencies
+from app.schemas import recipe_schema
+from app.services.recipe_service import RecipeService
 
 router = APIRouter()
 

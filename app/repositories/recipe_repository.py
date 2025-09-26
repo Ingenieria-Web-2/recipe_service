@@ -4,8 +4,8 @@ Recipe repository for database interactions.
 
 from sqlalchemy.orm import Session
 
-from models.recipe_model import Recipe
-from schemas.recipe_schema import RecipeCreate
+from app.models.recipe_model import Recipe
+from app.schemas.recipe_schema import RecipeCreate
 
 
 class RecipeRepository:
